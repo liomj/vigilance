@@ -2,6 +2,9 @@
 
 Instruction
 
-a. Setup Your MSAccess Database ODBC Data Source Connection (att2000.mdb)
+a. Setup your ODBC Data Source Connection For MS Access Database (att2000.mdb)
+- Add System DSN - Microsoft Access Driver
+- Enter Data Source Name
+- Select Vigilance Database - att2000.mdb
 
-b. Setup simple config in php file
+b. Setup configuration in config.php file
