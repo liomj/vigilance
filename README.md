@@ -11,4 +11,4 @@ b. Setup configuration in config.php file
 
 Notes
 
-SSN field in user table for att2000.mdb database is set as Staff IC Number and must be filled out
+SSN field in user table for att2000.mdb database is set as Staff IC Number and must be filled out for attendance report
