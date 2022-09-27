@@ -71,6 +71,37 @@ echo "<div class='p-5'>";
 echo "<br><span style='text-transform:uppercase'><b>Staff Directory</b></span><br><br>";
 ?>
 
+<p>
+<div class="form-group">
+  <label for="department">Select Department:</label>
+<select id="table-filter">
+<option value="">Show All</option>
+
+
+   <?php
+           
+$getdept="SELECT 
+  department.DEPTID,
+  department.DEPTNAME
+  FROM DEPARTMENTS 
+  as department";
+  
+  $deptrs = odbc_exec($conn, $getdept);
+if (!$deptrs) {
+    exit("Error in SQL Display");
+}
+	
+while(odbc_fetch_row($deptrs)){
+$deptname=odbc_result($deptrs,"DEPTNAME");
+$deptid=odbc_result($deptrs,"DEPTID");
+
+echo "<option value='$deptname'>--&nbsp;&nbsp;$deptname</option>";
+}
+?>
+</select>
+</div>
+</p>
+
 <table id="userlist" class="table table-striped table-bordered" cellspacing="0">
 
     <thead>
