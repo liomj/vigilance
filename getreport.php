@@ -3,7 +3,6 @@
 //  URL: (https://github.com/liomj/)
 //  Description: Simple PHP/MS Access/ODBC Attendance Report For Vigilance Fingerprint Time Clock VT300 Device (VAMS 3.7.1)
 
-
 include "config.php";
 ?>
 <script>
