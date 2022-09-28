@@ -174,6 +174,7 @@ echo "<div class='form-group'>
 <?php
 
 echo "</div>";
+echo "<script src='assets/js/bootstrap.bundle.min.js'></script>";
 echo "</body></html>"; 
 
 ?>

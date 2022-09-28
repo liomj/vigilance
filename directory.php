@@ -161,6 +161,7 @@ $deptid=odbc_result($rs,"DEPTID");
 
 <?php
 echo "</main></div>";
+echo "<script src='assets/js/bootstrap.bundle.min.js'></script>";
 echo "</body></html>"; 
 
 ?>
