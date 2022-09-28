@@ -101,13 +101,14 @@ echo "<option value='$deptname'>--&nbsp;&nbsp;$deptname</option>";
 </select>
 </div>
 </p>
-
+<div class="table-responsive">
 <table id="userlist" class="table table-striped table-bordered" cellspacing="0">
 
     <thead>
         <tr>
 			<th>Name</th>
 			<th>Department</th>
+			<th>Designation</th>
 			<th>IC No</th>
 			<th>User ID</th>
         </tr>
@@ -116,6 +117,7 @@ echo "<option value='$deptname'>--&nbsp;&nbsp;$deptname</option>";
         <tr>
 			<th>Name</th>
 			<th>Department</th>
+			<th>Designation</th>
 			<th>IC No</th>
 			<th>User ID</th>
         </tr>
@@ -128,6 +130,7 @@ $accessQuery="SELECT
   user.Name,
   user.DEFAULTDEPTID,
   user.SSN,
+  user.TITLE,
   department.DEPTID,
   department.DEPTNAME
   FROM USERINFO AS user 
@@ -143,12 +146,14 @@ while(odbc_fetch_row($rs)){
 $userid=odbc_result($rs,"USERID");
 $name=odbc_result($rs,"Name");
 $userdeptid=odbc_result($rs,"DEFAULTDEPTID");
-$icnumber=odbc_result($rs,"SSN");
+$icnumber=odbc_result($rs,"SSN"); 
+$designation=odbc_result($rs,"TITLE");
 $deptname=odbc_result($rs,"DEPTNAME");
 $deptid=odbc_result($rs,"DEPTID");
         echo "<tr>";
 		echo "<td>$name </td>";	
 	    echo "<td><b>$deptname </b></td>";
+		echo "<td>$designation</td>";
 		echo "<td>$icnumber</td>";
 		echo "<td>$userid</td>";
         echo "</tr>";
@@ -158,6 +163,7 @@ $deptid=odbc_result($rs,"DEPTID");
      ?>
     </tbody>
 </table>
+</div>
 
 <?php
 echo "</main></div>";
