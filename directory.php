@@ -74,7 +74,7 @@ echo "<br><span style='text-transform:uppercase'><b>Staff Directory</b></span><b
 <p>
 <div class="form-group">
   <label for="department">Select Department:</label>
-<select id="table-filter">
+  <select id="table-filter" class="form-control">
 <option value="">Show All</option>
 
 
