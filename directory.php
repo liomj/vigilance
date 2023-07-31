@@ -27,7 +27,10 @@ $(document).ready(function() {
 			
         ],
         "order": [[1, 'desc' ]],
-
+		"search": {
+		"regex": true,
+		"smart": false
+		},
         "displayLength": 25,
         "drawCallback": function ( settings ) {
             var api = this.api();
